@@ -8,7 +8,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
 app.get("/", function(req, res){
-    res.redirect("https://newsletter-dwfv.vercel.app/signup.html");
+    res.redirect("https://newsletter-dwfv.vercel.app/");
 });
 
 app.post("/", function(req,res){
