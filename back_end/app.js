@@ -7,7 +7,7 @@ app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended: true}));
 
 app.get("/", function(req, res){
-    res.render("https://newsletter-dwfv.vercel.app/");
+    res.render("https://newsletter-dwfv.vercel.app/signup.html");
 });
 
 app.post("/", function(req,res){
@@ -34,7 +34,7 @@ app.post("/", function(req,res){
     }
     const request=https.request(url, options, function(response){
         if(response.statusCode===200){
-            res.sendFile(__dirname+"/success.html");
+            res.render("https://newsletter-dwfv.vercel.app/success.html");
         }
         else{
             res.sendFile(__dirname+"/failure.html");
